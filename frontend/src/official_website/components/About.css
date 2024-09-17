@@ -1,0 +1,257 @@
+:root {
+    --primary-color: #ff4d4d;
+    --secondary-color: #000;
+    --background-color: #111;
+    --text-color: #f9f9f9;
+    --heading-color: #ffffff;
+    --heading-bg-color: #333;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+body * {
+    box-shadow: none !important;
+}
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.about-page .header {
+    background: var(--primary-color);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.about-page .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-page .nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.about-page .nav li {
+    margin: 0 15px;
+}
+
+.about-page .nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.about-page .nav a:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+.about-page h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 20px 0;
+    color: var(--heading-color);
+    background-color: var(--heading-bg-color);
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about-page .header {
+    background: var(--primary-color);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.about-page .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .about-page .main-content {
+        margin-top: 70px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .about-page .header {
+        height: 70px;
+    }
+
+    .about-page .main-content {
+        margin-top: 700px;
+    }
+}
+
+
+.about-page .section {
+    width: 100%;
+    padding: 10 20px;
+    box-sizing: border-box;
+}
+
+.about-page .about-info,
+.about-page .team,
+.about-page .history {
+    width: 100%;
+    max-width: 12000px;
+    margin-bottom: 40px;
+    animation: slideIn 1.5s ease-out;
+    padding: 20px;
+    background-color: var(--heading-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-page h2 {
+    font-size: 2em;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+}
+
+.about-page p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+}
+
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.about-page .footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-page .footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 1200px) {
+    .about-page .nav a {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .about-page h1 {
+        font-size: 2em;
+    }
+
+    .about-page h2 {
+        font-size: 1.5em;
+    }
+
+    .about-page p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page .nav a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .about-page h1 {
+        font-size: 1.8em;
+    }
+
+    .about-page h2 {
+        font-size: 1.3em;
+    }
+
+    .about-page p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page .nav a {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+
+    .about-page h1 {
+        font-size: 1.5em;
+    }
+
+    .about-page h2 {
+        font-size: 1.2em;
+    }
+
+    .about-page p {
+        font-size: 0.8em;
+    }
+}

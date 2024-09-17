@@ -1,0 +1,160 @@
+
+.reportPage {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #2d3748;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.reportPage h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2em;
+    flex-shrink: 0;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+}
+
+
+.backButton {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 12px 25px;
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+}
+
+.backButton:hover {
+    background-color: #005000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), inset 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+    animation-delay: 0.1s;
+}
+
+.filterContainer label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.filterContainer select {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1.1em;
+    box-shadow: 0 0 10px #000000;
+    background-color: #444;
+    color: #fff;
+}
+
+
+.chartsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+.chartSection {
+    flex-basis: 48%;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    box-shadow: 0 0 50px #000000;
+}
+
+
+.tablesContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+.tableSection {
+    flex-basis: 48%;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000000;
+}
+
+
+.reportTable {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2a2a2a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #000000;
+}
+
+.reportTable th, .reportTable td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.reportTable th {
+    background-color: #333;
+    font-weight: bold;
+}
+
+.reportTable tr:nth-child(even) {
+    background-color: #2d3748;
+}
+
+.reportTable tr:hover {
+    background-color: #3c4858;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,327 @@
+:root {
+    --primary-color: #ff4d4d;
+    --secondary-color: #000;
+    --background-color: #111;
+    --text-color: #f9f9f9;
+    --heading-color: #ffffff;
+    --heading-bg-color: #333;
+    --input-bg-color: #222;
+    --accent-color: #ffb6b6;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+body * {
+    box-shadow: none !important;
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.contact-page .header {
+    background: var(--primary-color);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+.contact-page .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contact-page .nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.contact-page .nav li {
+    margin: 0 15px;
+}
+
+.contact-page .nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.contact-page .nav a:hover {
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-page h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 20px 0;
+    color: var(--heading-color);
+    background-color: var(--heading-bg-color);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.contact-page .main-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+
+@media (max-width: 768px) {
+    .contact-page .main-content {
+        margin-top: 70px;
+    }
+
+    .contact-page .header {
+        height: 60px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contact-page .header {
+        height: 70px;
+    }
+
+    .contact-page .main-content {
+        margin-top: 600px;
+    }
+}
+
+.contact-page .section {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.contact-page .contact-info,
+.contact-page .contact-form {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    animation: slideIn 1.5s ease-out;
+    padding: 20px;
+    background-color: var(--heading-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-page h2 {
+    font-size: 2em;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+}
+
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.contact-page p, .contact-page address {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: popIn 0.5s forwards;
+}
+
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-page label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+
+.contact-page input, .contact-page textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.contact-page input:focus, .contact-page textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 15px rgba(255, 182, 182, 0.7);
+}
+
+.contact-page textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-page button {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-page button:hover {
+    background: var(--accent-color);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-page .footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-page .footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+
+@media (max-width: 1200px) {
+    .contact-page .nav a {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    .contact-page h1 {
+        font-size: 2em;
+    }
+
+    .contact-page h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-page p, .contact-page address {
+        font-size: 1em;
+    }
+
+    .contact-page input, .contact-page textarea {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page .nav a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .contact-page h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-page h2 {
+        font-size: 1.3em;
+    }
+
+    .contact-page p, .contact-page address {
+        font-size: 0.9em;
+    }
+
+    .contact-page input, .contact-page textarea {
+        max-width: 300px;
+        font-size: 0.9em;
+    }
+
+    .contact-page button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page .nav a {
+        font-size: 0.8em;
+        padding: 4px 8px;
+    }
+
+    .contact-page h1 {
+        font-size: 1.5em;
+    }
+
+    .contact-page h2 {
+        font-size: 1.2em;
+    }
+
+    .contact-page p, .contact-page address {
+        font-size: 0.8em;
+    }
+
+    .contact-page input, .contact-page textarea {
+        max-width: 200px;
+        font-size: 0.8em;
+    }
+
+    .contact-page button {
+        font-size: 0.8em;
+    }
+}

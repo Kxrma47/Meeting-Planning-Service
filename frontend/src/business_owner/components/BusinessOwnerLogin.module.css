@@ -1,0 +1,141 @@
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #14161a; /* Darker background color for smoother contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.businessOwnerLoginContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #1a1d21, #111316); /* Smooth gradient background */
+}
+
+.businessOwnerLoginBox {
+    width: 350px;
+    padding: 2rem;
+    background-color: #1f2227; /* Dark container background */
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Stronger shadow for depth */
+    text-align: center;
+    color: #dcdcdc; /* Softer text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
+    z-index: 1;
+}
+
+.businessOwnerLoginBox h2 {
+    margin-bottom: 2rem;
+    color: #00aaff; /* Accent color for heading */
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Softer blue neon effect */
+    animation: glow 2s ease-in-out infinite alternate; /* Slow glow effect */
+    font-weight: 700;
+    letter-spacing: 0.05em; /* Slight letter spacing for a cleaner look */
+}
+
+.businessOwnerLoginBox input {
+    width: 100%;
+    padding: 0.85rem;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2e35;
+    color: #dcdcdc;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.businessOwnerLoginBox input::placeholder {
+    color: #bbb; /* Light gray for placeholder text */
+}
+
+.businessOwnerLoginBox input:focus {
+    background-color: #31363e;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Soft glow on focus */
+    border: 1px solid #00aaff; /* Accent color on focus */
+    outline: none;
+}
+
+.businessOwnerSubmitButton {
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #00aaff; /* Accent color for button */
+    color: #14161a; /* Dark button text for contrast */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Strong shadow effect */
+}
+
+.businessOwnerSubmitButton:hover {
+    background-color: #007bff; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Glow effect on hover */
+}
+
+.businessOwnerError {
+    color: #ff4b5c; /* Red color for error messages */
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    background-color: #2a2e35; /* Dark background for error message */
+    padding: 0.75rem;
+    border-radius: 8px; /* Softer error message container */
+    box-shadow: 0 0 10px rgba(255, 75, 92, 0.4); /* Subtle shadow for error message */
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #007bff, 0 0 15px #007bff, 0 0 20px #007bff, 0 0 25px #007bff;
+    }
+    to {
+        text-shadow: 0 0 20px #00aaff, 0 0 25px #00aaff, 0 0 30px #00aaff, 0 0 35px #00aaff;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Add slight motion on load */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling the scrollbar for a consistent look */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2227;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2a2e35;
+    border-radius: 10px;
+    border: 3px solid #1f2227;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #31363e;
+}

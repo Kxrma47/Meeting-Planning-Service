@@ -1,0 +1,181 @@
+
+.faqContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    background-color: #2d3748;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    overflow-y: auto;
+}
+
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #1e2433;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+.header h1 {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    text-shadow: 0 0 5px rgba(0, 128, 255, 0.5);
+    animation: lessNeonGlow 1.5s ease-in-out infinite alternate;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #16202a;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+    width: 100%;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    animation-delay: 0.2s;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav li {
+    margin: 0 10px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #39c0ed;
+}
+
+
+.logoutButton {
+    background-color: #39c0ed;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #000000;
+}
+
+.logoutButton:hover {
+    background-color: #2b9bcc;
+    box-shadow: 0 0 20px #2b9bcc;
+}
+
+
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+    animation-delay: 0.4s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+.faqItem {
+    background-color: #1e2433;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #000000;
+    flex: 1 1 calc(50% - 40px);
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+}
+
+.faqItem h3 {
+    color: #39c0ed;
+    margin-bottom: 10px;
+}
+
+.faqItem p {
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .mainContent {
+        flex-direction: column;
+    }
+
+    .faqItem {
+        max-width: 100%;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.logoutAnimation .header,
+.logoutAnimation .nav,
+.logoutAnimation .mainContent {
+    animation: slideOut 0.5s forwards;
+}
